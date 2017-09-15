@@ -207,7 +207,7 @@ abstract class AbstractResourceOwner implements ResourceOwnerInterface
     protected function getUserResponse()
     {
         $response = new $this->options['user_response_class']();
-        if ($response instanceof PathUserResponse) {
+        if ($response instanceof AbstractUserResponse) {
             $response->setPaths($this->paths);
         }
 
